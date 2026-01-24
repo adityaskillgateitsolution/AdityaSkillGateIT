@@ -19,6 +19,14 @@ export const COURSES: Course[] = [
     image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=800'
   },
   {
+    id: '6',
+    name: 'Frontend Specialization',
+    category: 'Web Development',
+    technologies: ['HTML5', 'Tailwind CSS', 'JavaScript', 'Next.js'],
+    description: 'Focus on crafting pixel-perfect, responsive user interfaces.',
+    image: 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&q=80&w=800'
+  },
+  {
     id: '3',
     name: 'Search Engine Optimization (SEO)',
     category: 'Digital Marketing',
@@ -30,18 +38,41 @@ export const COURSES: Course[] = [
     id: '4',
     name: 'Social Media Management',
     category: 'Digital Marketing',
-    technologies: ['Meta Ads', 'Content Strategy', 'Copertyuibn. cvghvghuiuhbywriting'],
+    technologies: ['Meta Ads', 'Content Strategy', 'Copywriting'],
     description: 'Grow brands through strategic social media engagement.',
     image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=800'
   },
-
   {
-    id: '6',
-    name: 'Frontend Specialization',
-    category: 'Web Development',
-    technologies: ['HTML5', 'Tailwind CSS', 'JavaScript', 'Next.js'],
-    description: 'Focus on crafting pixel-perfect, responsive user interfaces.',
-    image: 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&q=80&w=800'
+    id: '5',
+    name: 'Performance Marketing',
+    category: 'Digital Marketing',
+    technologies: ['Google Ads', 'Facebook Ads', 'Analytics'],
+    description: 'Master paid advertising designed to drive conversions.',
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800'
+  },
+  {
+    id: '7',
+    name: 'Modern UI/UX Principles',
+    category: 'UI/UX Designing',
+    technologies: ['Figma', 'Adobe XD', 'Prototyping'],
+    description: 'Design user-centric interfaces that people love to use.',
+    image: 'https://images.unsplash.com/photo-1586717791821-3f44a563eb4c?auto=format&fit=crop&q=80&w=800'
+  },
+  {
+    id: '8',
+    name: 'Mobile App Design',
+    category: 'UI/UX Designing',
+    technologies: ['Figma', 'Prototyping', 'User Research'],
+    description: 'Create intuitive and beautiful mobile application interfaces.',
+    image: 'https://images.unsplash.com/photo-1555421689-491a97ff2040?auto=format&fit=crop&q=80&w=800'
+  },
+  {
+    id: '9',
+    name: 'Advanced Prototyping',
+    category: 'UI/UX Designing',
+    technologies: ['Figma', 'Principle', 'Interaction Design'],
+    description: 'Bring your designs to life with complex interactions and animations.',
+    image: 'https://images.unsplash.com/photo-1542744094-24638eff58bb?auto=format&fit=crop&q=80&w=800'
   }
 ];
 
