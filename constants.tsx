@@ -30,18 +30,11 @@ export const COURSES: Course[] = [
     id: '4',
     name: 'Social Media Management',
     category: 'Digital Marketing',
-    technologies: ['Meta Ads', 'Content Strategy', 'Copywriting'],
+    technologies: ['Meta Ads', 'Content Strategy', 'Copertyuibn. cvghvghuiuhbywriting'],
     description: 'Grow brands through strategic social media engagement.',
     image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=800'
   },
-  {
-    id: '5',
-    name: 'Modern UI/UX Principles',
-    category: 'UI/UX Designing',
-    technologies: ['Figma', 'Adobe XD', 'Prototyping'],
-    description: 'Design user-centric interfaces that people love to use.',
-    image: 'https://images.unsplash.com/photo-1586717791821-3f44a563eb4c?auto=format&fit=crop&q=80&w=800'
-  },
+
   {
     id: '6',
     name: 'Frontend Specialization',
