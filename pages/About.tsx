@@ -22,16 +22,14 @@ const About: React.FC = () => {
             <Target className="w-12 h-12 mb-6 text-blue-200" />
             <h2 className="text-3xl font-bold mb-4">Our Mission</h2>
             <p className="text-blue-50 leading-relaxed text-lg">
-              To empower individuals with practical, industry-relevant technical skills and provide businesses with innovative IT solutions that drive growth and digital transformation.
-            </p>
+            To provide accessible, high-quality education that empowers individuals to develop in-demand skills and achieve their career aspirations. We believe in transforming lives through practical, industry-relevant learning experiences.            </p>
           </div>
           <div className="bg-slate-900 dark:bg-slate-800 p-12 rounded-[2rem] text-white relative overflow-hidden border border-slate-700 shadow-2xl shadow-slate-900/20">
             <div className="absolute top-0 right-0 w-32 h-32 bg-green-500/10 rounded-full -mr-16 -mt-16" />
             <Eye className="w-12 h-12 mb-6 text-green-400" />
             <h2 className="text-3xl font-bold mb-4">Our Vision</h2>
             <p className="text-slate-400 dark:text-slate-400 leading-relaxed text-lg">
-              To be a global leader in IT education and services, recognized for our commitment to excellence, integrity, and fostering the next generation of digital innovators.
-            </p>
+            To become the leading platform for skill development, bridging the gap between traditional education and industry requirements. We envision a world where everyone has access to quality education and career opportunities.            </p>
           </div>
         </div>
 
@@ -45,12 +43,15 @@ const About: React.FC = () => {
             <span className="text-blue-600 dark:text-blue-400 font-bold uppercase tracking-widest text-sm mb-2 block">Message from Founder</span>
             <h2 className="text-3xl font-bold mb-6">"Education is the most powerful tool for change."</h2>
             <p className="text-slate-600 dark:text-slate-400 leading-relaxed mb-6 text-lg italic">
-              "We started Aditya Skill Gate with a simple goal: to make quality IT training accessible. Today, we don't just teach coding; we build careers. Our focus remains on practical skills and real-world results that translate directly to industry value."
-            </p>
+            Education is the most powerful weapon which you can use to change the world. At Aditya Skill Gate, we are committed to providing world-class education that not only teaches technical skills but also builds confidence and character. <br />
+
+            Our journey began with a simple belief: everyone deserves access to quality education regardless of their background. Today, we are proud to have helped thousands of students transform their careers and achieve their dreams. <br />
+
+            We don't just teach courses; we build careers, foster innovation, and create opportunities for a better future.            </p>
             <div className="flex items-center gap-4">
               <div className="w-12 h-1 bg-green-500 rounded-full" />
               <div>
-                <p className="font-bold text-xl">Aditya Kumar</p>
+                <p className="font-bold text-xl">Padma Marimuthu</p>
                 <p className="text-slate-500 dark:text-slate-400">Founder & CEO</p>
               </div>
             </div>
@@ -62,10 +63,10 @@ const About: React.FC = () => {
           <h2 className="text-3xl font-bold text-center text-slate-900 dark:text-white mb-12">Our Core Values</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
-              { icon: <Award className="text-blue-600" />, title: 'Excellence', desc: 'Highest standards of quality' },
-              { icon: <Users className="text-green-600" />, title: 'Community', desc: 'Growing together as one' },
-              { icon: <Heart className="text-red-500" />, title: 'Integrity', desc: 'Honesty in every action' },
-              { icon: <Target className="text-purple-600" />, title: 'Results', desc: 'Success-driven outcomes' }
+              { icon: <Award className="text-blue-600" />, title: 'Innovation', desc: 'We constantly evolve our teaching methods to stay ahead of industry trends' },
+              { icon: <Users className="text-green-600" />, title: 'Passion', desc: 'We are passionate about empowering individuals to achieve their career goals' },
+              { icon: <Heart className="text-red-500" />, title: 'Integrity', desc: 'We maintain the highest standards of honesty and transparency in all we do' },
+              { icon: <Target className="text-purple-600" />, title: 'Excellence', desc: 'We strive for excellence in every aspect of our educational programs' }
             ].map((value, idx) => (
               <div key={idx} className="bg-white dark:bg-slate-800 text-slate-900 dark:text-white p-8 rounded-2xl text-center shadow-lg shadow-slate-100 dark:shadow-none border border-slate-50 dark:border-slate-700 hover:-translate-y-2 transition-all">
                 <div className="flex justify-center mb-4 p-4 bg-slate-50 dark:bg-slate-700 rounded-full w-16 h-16 mx-auto shadow-inner">{value.icon}</div>
