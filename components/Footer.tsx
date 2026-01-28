@@ -9,55 +9,55 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center gap-2 mb-4">
-            <div className="flex items-center">
-              <img
-                src="/img/logo.png"
-                alt="Aditya Skill Gate Logo"
-                className="h-7 w-auto object-contain"
-              />
-            </div>
+              <div className="flex items-center">
+                <img
+                  src="/img/logo.png"
+                  alt="Aditya Skill Gate Logo"
+                  className="h-12 w-auto object-contain"
+                />
+              </div>
               <span className="text-xl font-bold text-slate-900 dark:text-white">Aditya Skill Gate IT Solution</span>
             </div>
             <p className="text-slate-600 dark:text-slate-400 max-w-sm mb-6">
-              Empowering the next generation of tech leaders through industry-standard training and cutting-edge IT solutions.
+              Empowering the next generation of tech leaders through industry-standard training and cutting-edge IT solution.
             </p>
           </div>
 
           <div align="center">
-              <h4 className="font-bold text-slate-900 dark:text-white mb-4">
-                Quick Links
-              </h4>
+            <h4 className="font-bold text-slate-900 dark:text-white mb-4">
+              Quick Links
+            </h4>
 
-              <div className="flex flex-col gap-3 items-center">
-                <a
-                  href="#/"
-                  className="w-40 text-center px-6 py-2 rounded-full bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 font-semibold hover:bg-blue-600 hover:text-white transition-all"
-                >
-                  Home
-                </a>
+            <div className="flex flex-col gap-3 items-center">
+              <a
+                href="#/"
+                className="w-40 text-center px-6 py-2 rounded-full bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 font-semibold hover:bg-blue-600 hover:text-white transition-all"
+              >
+                Home
+              </a>
 
-                <a
-                  href="#/about"
-                  className="w-40 text-center px-6 py-2 rounded-full bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 font-semibold hover:bg-blue-600 hover:text-white transition-all"
-                >
-                  About Us
-                </a>
+              <a
+                href="#/about"
+                className="w-40 text-center px-6 py-2 rounded-full bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 font-semibold hover:bg-blue-600 hover:text-white transition-all"
+              >
+                About Us
+              </a>
 
-                <a
-                  href="#/courses"
-                  className="w-40 text-center px-6 py-2 rounded-full bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 font-semibold hover:bg-blue-600 hover:text-white transition-all"
-                >
-                  Courses
-                </a>
+              <a
+                href="#/courses"
+                className="w-40 text-center px-6 py-2 rounded-full bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 font-semibold hover:bg-blue-600 hover:text-white transition-all"
+              >
+                Courses
+              </a>
 
-                <a
-                  href="#/jobs"
-                  className="w-40 text-center px-6 py-2 rounded-full bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 font-semibold hover:bg-blue-600 hover:text-white transition-all"
-                >
-                  Jobs
-                </a>
-              </div>
+              <a
+                href="#/jobs"
+                className="w-40 text-center px-6 py-2 rounded-full bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 font-semibold hover:bg-blue-600 hover:text-white transition-all"
+              >
+                Jobs
+              </a>
             </div>
+          </div>
 
 
           <div>
@@ -108,7 +108,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
         <div className="mt-12 pt-8 border-t border-slate-200 dark:border-slate-800 text-center text-slate-500 text-sm">
-          © {new Date().getFullYear()} Aditya Skill Gate IT Solutions. All rights reserved.
+          © {new Date().getFullYear()} Aditya Skill Gate IT Solution. All rights reserved.
         </div>
       </div>
     </footer>
