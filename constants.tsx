@@ -8,7 +8,7 @@ export const COURSES: Course[] = [
     category: 'Web Development',
     technologies: ['Python', 'Django', 'MySQL', 'REST API'],
     description: 'Build powerful applications and automate real-world tasks using versatile Python programming.',
-    image: 'public/img/python.png',
+    image: '/img/python.png',
     originalPrice: 30000,
     offeredPrice: 27000
   },
@@ -19,7 +19,7 @@ export const COURSES: Course[] = [
     category: 'Web Development',
     technologies: ['C#', 'Entity Framework', 'SQL Server', 'ASP.NET Core'],
     description: 'Develop enterprise-grade applications using the modern .NET framework.',
-    image: 'public/img/.net.png',
+    image: '/img/.net.png',
     originalPrice: 25000,
     offeredPrice: 20000
   },
@@ -29,7 +29,7 @@ export const COURSES: Course[] = [
     category: 'Web Development',
     technologies: ['Java', 'Spring Boot', 'MySQL', 'Hibernate'],
     description: 'Build secure, object-oriented applications using industry-standard Java technologies.',
-    image: 'public/img/java.png',
+    image: '/img/java.png',
     originalPrice: 25000,
     offeredPrice: 20000
   },
@@ -39,7 +39,7 @@ export const COURSES: Course[] = [
     category: 'Web Development',
     technologies: ['SQL Server', 'T-SQL', 'Indexes & Performance', 'Query Optimization'],
     description: 'Design, manage, and optimize databases using SQL Server for enterprise applications.',
-    image: 'public/img/sql server.png',
+    image: '/img/sql-server.png',
     originalPrice: 25000,
     offeredPrice: 20000
   },
@@ -49,7 +49,7 @@ export const COURSES: Course[] = [
     category: 'Web Development',
     technologies: ['React JS', 'Node JS', 'Express JS', 'MongoDB'],
     description: 'Create fast, interactive user interfaces using modern React component-based',
-    image: 'public/img/react.png',
+    image: '/img/react.png',
     originalPrice: 20000,
     offeredPrice: 18000
   },
@@ -59,7 +59,7 @@ export const COURSES: Course[] = [
     category: 'Web Development',
     technologies: ['Angular', 'Node JS', 'Express JS', 'MongoDB'],
     description: 'Develop scalable, structured web applications using Angular and TypeScript.',
-    image: 'public/img/angular.png',
+    image: '/img/angular.png',
     originalPrice: 20000,
     offeredPrice: 18000
   },
@@ -70,7 +70,7 @@ export const COURSES: Course[] = [
     category: 'Web Development',
     technologies: ['HTML', 'CSS', 'Java Script', 'Bootstrap'],
     description: 'Build responsive, high-performance websites using modern frontend technologies.',
-    image: 'public/img/frontend.png',
+    image: '/img/frontend.png',
     originalPrice: 18000,
     offeredPrice: 15000
   },
@@ -80,7 +80,7 @@ export const COURSES: Course[] = [
     category: 'Web Development',
     technologies: ['Angukar / React JS', 'java / .Net', 'Sql Server / MySQL', 'Prompt Engineering / AI'],
     description: 'Learn frontend, backend, and databases to build real-world, production-ready applications.',
-    image: 'public/img/full stack.png',
+    image: '/img/full stack.png',
     originalPrice: 67000,
     offeredPrice: 50000
   },
@@ -91,7 +91,7 @@ export const COURSES: Course[] = [
     category: 'UI/UX Designing',
     technologies: ['Figma', 'Adobe XD', 'Prototyping'],
     description: 'Design intuitive, user-centered interfaces with professional UI/UX design principles.',
-    image: 'public/img/ui ux.png',
+    image: '/img/ui-ux.png',
     originalPrice: 18000,
     offeredPrice: 15000
   },
@@ -101,7 +101,7 @@ export const COURSES: Course[] = [
     category: 'UI/UX Designing',
     technologies: ['Figma', 'React Native', 'Android'],
     description: 'Create powerful Android and iOS apps using modern mobile development frameworks.',
-    image: 'public/img/mobile app.png',
+    image: '/img/mobile-app.png',
     originalPrice: 18000,
     offeredPrice: 15000
   }
@@ -113,14 +113,14 @@ export const TEAM_MEMBERS: TeamMember[] = [
     name: 'Abdul kadar Imran',
     designation: 'Developer',
     specialist: 'Frontend , Digital Marketing',
-    image: 'public/img/imran.jpeg'
+    image: '/img/imran.jpeg'
   },
   // {
   //   id: '2',
   //   name: 'Sarah Jennifer',
   //   designation: 'Technical Director',
   //   specialist: 'Full Stack Architect',
-  //   image: 'public/img/1000237364'
+  //   image: '/img/1000237364'
   // },
   // {
   //   id: '3',
@@ -205,14 +205,14 @@ export const TESTIMONIALS: Testimonial[] = [
     name: 'Rajeshwari',
     role: 'Frontend Developer',
     content: 'Software fundamentals were explained clearly, making the concepts easy to understand. The teaching approach is excellent.',
-    image: 'public/img/woman.png'
+    image: '/img/woman.png'
   },
   {
     id: 't2',
     name: 'Vijaya Ananthi',
     role: 'Full Stack Developer',
     content: 'The teaching approach is clear and simple, making complex software concepts easy to understand.',
-    image: 'public/img/woman.png'
+    image: '/img/woman.png'
   }
 ];
 

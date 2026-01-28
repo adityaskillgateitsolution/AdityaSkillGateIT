@@ -282,85 +282,85 @@ const Services: React.FC = () => {
                 name: "Ananthi",
                 role: "Full Stack Developer",
                 company: "Intern at TechFlow",
-                image: "public/img/woman.png"
+                image: "/img/woman.png"
               },
               {
                 name: "Rajeswari",
                 role: "UI/UX Designer",
                 company: "Intern at CreativeMinds",
-                image: "public/img/woman.png"
+                image: "/img/woman.png"
               },
               {
                 name: "Kanchana devi",
                 role: "UI/UX Designer",
                 company: "Intern at CreativeMinds",
-                image: "public/img/woman.png"
+                image: "/img/woman.png"
               },
               {
                 name: "Maha Priya",
                 role: "Data Scientist",
                 company: "Intern at DataCorp",
-                image: "public/img/woman.png"
+                image: "/img/woman.png"
               },
               {
                 name: "RVijaya Ananthi",
                 role: "Full Stack Developer",
                 company: "Intern at TechFlow",
-                image: "public/img/woman.png"
+                image: "/img/woman.png"
               },
               {
                 name: "Bavani",
                 role: "UI/UX Designer",
                 company: "Intern at CreativeMinds",
-                image: "public/img/woman.png"
+                image: "/img/woman.png"
               },
               {
                 name: "Santhiya",
                 role: "UI/UX Designer",
                 company: "Intern at CreativeMinds",
-                image: "public/img/woman.png"
+                image: "/img/woman.png"
               },
               {
                 name: "Sivarathi",
                 role: "Data Scientist",
                 company: "Intern at DataCorp",
-                image: "public/img/woman.png"
+                image: "/img/woman.png"
               },
               {
                 name: "Shameema",
                 role: "Data Scientist",
                 company: "Intern at DataCorp",
-                image: "public/img/woman.png"
+                image: "/img/woman.png"
               },
               {
                 name: "Jeeva malar",
                 role: "Data Scientist",
                 company: "Intern at DataCorp",
-                image: "public/img/woman.png"
+                image: "/img/woman.png"
               },
               {
                 name: "Priyanka",
                 role: "Data Scientist",
                 company: "Intern at DataCorp",
-                image: "public/img/woman.png"
+                image: "/img/woman.png"
               },
               {
                 name: "Priyanka",
                 role: "Data Scientist",
                 company: "Intern at DataCorp",
-                image: "public/img/woman.png"
+                image: "/img/woman.png"
               },
               {
                 name: "Dhana Shri",
                 role: "Data Scientist",
                 company: "Intern at DataCorp",
-                image: "public/img/woman.png"
+                image: "/img/woman.png"
               },
               {
                 name: "Efciba",
                 role: "Digital Marketer",
                 company: "Intern at BrandBoost",
-                image: "public/img/woman.png"
+                image: "/img/woman.png"
               }
             ].map((student, index) => (
               <div key={index} className="group relative bg-white dark:bg-slate-800 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
