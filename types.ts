@@ -2,10 +2,12 @@
 export interface Course {
   id: string;
   name: string;
-  category: 'Web Development' | 'Digital Marketing' | 'UI/UX Designing';
+  category: 'Web Development' | 'UI/UX Designing';
   technologies: string[];
   description: string;
   image: string;
+  originalPrice: number;
+  offeredPrice: number;
 }
 
 export interface Job {
