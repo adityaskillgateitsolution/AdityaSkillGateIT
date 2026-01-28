@@ -36,10 +36,10 @@ const Courses: React.FC = () => {
               </ul>
             </div>
             <div className="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20 shadow-2xl">
-               <Globe className="w-20 h-20 mb-6 opacity-40 animate-pulse" />
-               <p className="text-2xl font-light italic leading-relaxed">
-                 "Our courses are designed to transition you from zero knowledge to a ready-to-hire developer within 16-24 weeks."
-               </p>
+              <Globe className="w-20 h-20 mb-6 opacity-40 animate-pulse" />
+              <p className="text-2xl font-light italic leading-relaxed">
+                "Our courses are designed to transition you from zero knowledge to a ready-to-hire developer within 16-24 weeks."
+              </p>
             </div>
           </div>
           <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -mr-32 -mt-32" />
@@ -64,7 +64,7 @@ const Courses: React.FC = () => {
                   <div className="p-8 flex-grow flex flex-col">
                     <h3 className="text-xl font-bold mb-3">{course.name}</h3>
                     <p className="text-slate-600 dark:text-slate-400 text-sm mb-6 leading-relaxed line-clamp-2">{course.description}</p>
-                    
+
                     <div className="mb-8 flex flex-wrap gap-2">
                       {course.technologies.map((tech) => (
                         <span key={tech} className="text-[9px] font-black px-2.5 py-1 bg-slate-100 dark:bg-slate-700 text-slate-500 dark:text-slate-300 rounded-lg uppercase tracking-wider">
@@ -73,9 +73,21 @@ const Courses: React.FC = () => {
                       ))}
                     </div>
 
+                    <div className="mb-6 flex items-center gap-3">
+                      <span className="text-sm text-slate-400 font-medium line-through">
+                        ₹{course.originalPrice.toLocaleString()}
+                      </span>
+                      <span className="text-2xl font-bold text-blue-600 dark:text-blue-400">
+                        ₹{course.offeredPrice.toLocaleString()}
+                      </span>
+                      <span className="text-xs font-bold text-green-500 bg-green-100 dark:bg-green-900/30 px-2 py-1 rounded-full">
+                        {Math.round(((course.originalPrice - course.offeredPrice) / course.originalPrice) * 100)}% OFF
+                      </span>
+                    </div>
+
                     <div className="mt-auto">
-                      <Link 
-                        to="/contact" 
+                      <Link
+                        to="/contact"
                         className="w-full py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-2xl font-bold flex items-center justify-center gap-2 shadow-xl shadow-blue-500/30 hover:shadow-blue-600/50 transition-all"
                       >
                         Enroll Now <ShoppingCart size={18} />

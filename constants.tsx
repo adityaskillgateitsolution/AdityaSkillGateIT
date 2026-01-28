@@ -4,107 +4,138 @@ import { Course, Job, BlogPost, Testimonial, TeamMember } from './types';
 export const COURSES: Course[] = [
   {
     id: '1',
-    name: 'Full Stack Web Development',
+    name: 'Python Full Stack Development',
     category: 'Web Development',
-    technologies: ['React', 'Node.js', 'MongoDB', 'Express', 'TypeScript'],
-    description: 'Master the MERN stack and build production-ready applications.',
-    image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=800'
+    technologies: ['Python', 'Django', 'MySQL', 'REST API'],
+    description: 'Build powerful applications and automate real-world tasks using versatile Python programming.',
+    image: 'public/img/python.png',
+    originalPrice: 30000,
+    offeredPrice: 27000
+  },
+
+  {
+    id: '2',
+    name: '.Net Full Course',
+    category: 'Web Development',
+    technologies: ['C#', 'Entity Framework', 'SQL Server', 'ASP.NET Core'],
+    description: 'Develop enterprise-grade applications using the modern .NET framework.',
+    image: 'public/img/.net.png',
+    originalPrice: 25000,
+    offeredPrice: 20000
   },
   {
     id: '2',
-    name: 'Advanced Java Spring Boot',
+    name: 'Java',
     category: 'Web Development',
     technologies: ['Java', 'Spring Boot', 'MySQL', 'Hibernate'],
-    description: 'Enterprise-grade backend development with Java ecosystem.',
-    image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=800'
-  },
-  {
-    id: '6',
-    name: 'Frontend Specialization',
-    category: 'Web Development',
-    technologies: ['HTML5', 'Tailwind CSS', 'JavaScript', 'Next.js'],
-    description: 'Focus on crafting pixel-perfect, responsive user interfaces.',
-    image: 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&q=80&w=800'
+    description: 'Build secure, object-oriented applications using industry-standard Java technologies.',
+    image: 'public/img/java.png',
+    originalPrice: 25000,
+    offeredPrice: 20000
   },
   {
     id: '3',
-    name: 'Search Engine Optimization (SEO)',
-    category: 'Digital Marketing',
-    technologies: ['Google Analytics', 'Ahrefs', 'SEMrush'],
-    description: 'Learn to rank websites at the top of search results.',
-    image: 'https://images.unsplash.com/photo-1571721795195-a2ca2d3370a9?auto=format&fit=crop&q=80&w=800'
+    name: 'SQL Server',
+    category: 'Web Development',
+    technologies: ['SQL Server', 'T-SQL', 'Indexes & Performance', 'Query Optimization'],
+    description: 'Design, manage, and optimize databases using SQL Server for enterprise applications.',
+    image: 'public/img/sql server.png',
+    originalPrice: 25000,
+    offeredPrice: 20000
   },
   {
     id: '4',
-    name: 'Social Media Management',
-    category: 'Digital Marketing',
-    technologies: ['Meta Ads', 'Content Strategy', 'Copywriting'],
-    description: 'Grow brands through strategic social media engagement.',
-    image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=800'
+    name: 'React JS',
+    category: 'Web Development',
+    technologies: ['React JS', 'Node JS', 'Express JS', 'MongoDB'],
+    description: 'Create fast, interactive user interfaces using modern React component-based',
+    image: 'public/img/react.png',
+    originalPrice: 20000,
+    offeredPrice: 18000
   },
   {
     id: '5',
-    name: 'Performance Marketing',
-    category: 'Digital Marketing',
-    technologies: ['Google Ads', 'Facebook Ads', 'Analytics'],
-    description: 'Master paid advertising designed to drive conversions.',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800'
+    name: 'Angular',
+    category: 'Web Development',
+    technologies: ['Angular', 'Node JS', 'Express JS', 'MongoDB'],
+    description: 'Develop scalable, structured web applications using Angular and TypeScript.',
+    image: 'public/img/angular.png',
+    originalPrice: 20000,
+    offeredPrice: 18000
   },
+
+  {
+    id: '6',
+    name: 'Frontend Development',
+    category: 'Web Development',
+    technologies: ['HTML', 'CSS', 'Java Script', 'Bootstrap'],
+    description: 'Build responsive, high-performance websites using modern frontend technologies.',
+    image: 'public/img/frontend.png',
+    originalPrice: 18000,
+    offeredPrice: 15000
+  },
+  {
+    id: '7',
+    name: 'Full Stack Development',
+    category: 'Web Development',
+    technologies: ['Angukar / React JS', 'java / .Net', 'Sql Server / MySQL', 'Prompt Engineering / AI'],
+    description: 'Learn frontend, backend, and databases to build real-world, production-ready applications.',
+    image: 'public/img/full stack.png',
+    originalPrice: 67000,
+    offeredPrice: 50000
+  },
+
   {
     id: '7',
     name: 'Modern UI/UX Principles',
     category: 'UI/UX Designing',
     technologies: ['Figma', 'Adobe XD', 'Prototyping'],
-    description: 'Design user-centric interfaces that people love to use.',
-    image: 'https://images.unsplash.com/photo-1586717791821-3f44a563eb4c?auto=format&fit=crop&q=80&w=800'
+    description: 'Design intuitive, user-centered interfaces with professional UI/UX design principles.',
+    image: 'public/img/ui ux.png',
+    originalPrice: 18000,
+    offeredPrice: 15000
   },
   {
-    id: '8',
-    name: 'Mobile App Design',
+    id: '7',
+    name: 'Mobile App Development',
     category: 'UI/UX Designing',
-    technologies: ['Figma', 'Prototyping', 'User Research'],
-    description: 'Create intuitive and beautiful mobile application interfaces.',
-    image: 'https://images.unsplash.com/photo-1555421689-491a97ff2040?auto=format&fit=crop&q=80&w=800'
-  },
-  {
-    id: '9',
-    name: 'Advanced Prototyping',
-    category: 'UI/UX Designing',
-    technologies: ['Figma', 'Principle', 'Interaction Design'],
-    description: 'Bring your designs to life with complex interactions and animations.',
-    image: 'https://images.unsplash.com/photo-1542744094-24638eff58bb?auto=format&fit=crop&q=80&w=800'
+    technologies: ['Figma', 'React Native', 'Android'],
+    description: 'Create powerful Android and iOS apps using modern mobile development frameworks.',
+    image: 'public/img/mobile app.png',
+    originalPrice: 18000,
+    offeredPrice: 15000
   }
 ];
 
 export const TEAM_MEMBERS: TeamMember[] = [
   {
     id: '1',
-    name: 'Aditya Kumar',
-    designation: 'Chief Executive Officer',
-    specialist: 'Cloud Infrastructure Specialist',
-    image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=400'
+    name: 'Abdul kadar Imran',
+    designation: 'Developer',
+    specialist: 'Frontend , Digital Marketing',
+    image: 'public/img/imran.jpeg'
   },
-  {
-    id: '2',
-    name: 'Sarah Jennifer',
-    designation: 'Technical Director',
-    specialist: 'Full Stack Architect',
-    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400'
-  },
-  {
-    id: '3',
-    name: 'Vikram Singh',
-    designation: 'Head of Education',
-    specialist: 'Data Science & AI Mentor',
-    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=400'
-  },
-  {
-    id: '4',
-    name: 'Priya Sharma',
-    designation: 'Lead Product Designer',
-    specialist: 'UI/UX Strategy Specialist',
-    image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=400'
-  }
+  // {
+  //   id: '2',
+  //   name: 'Sarah Jennifer',
+  //   designation: 'Technical Director',
+  //   specialist: 'Full Stack Architect',
+  //   image: 'public/img/1000237364'
+  // },
+  // {
+  //   id: '3',
+  //   name: 'Vikram Singh',
+  //   designation: 'Head of Education',
+  //   specialist: 'Data Science & AI Mentor',
+  //   image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=400'
+  // },
+  // {
+  //   id: '4',
+  //   name: 'Priya Sharma',
+  //   designation: 'Lead Product Designer',
+  //   specialist: 'UI/UX Strategy Specialist',
+  //   image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=400'
+  // }
 ];
 
 export const JOBS: Job[] = [
@@ -171,17 +202,17 @@ export const BLOGS: BlogPost[] = [
 export const TESTIMONIALS: Testimonial[] = [
   {
     id: 't1',
-    name: 'Suresh Raina',
-    role: 'Frontend Developer @ TechMahindra',
-    content: 'The practical approach at Aditya Skill Gate helped me land my dream job within 3 months of finishing the course.',
-    image: 'https://i.pravatar.cc/150?u=suresh'
+    name: 'Rajeshwari',
+    role: 'Frontend Developer',
+    content: 'Software fundamentals were explained clearly, making the concepts easy to understand. The teaching approach is excellent.',
+    image: 'public/img/woman.png'
   },
   {
     id: 't2',
-    name: 'Anjali Gupta',
-    role: 'UI Designer @ Zomato',
-    content: 'Detailed feedback from mentors and live projects made all the difference in building my portfolio.',
-    image: 'https://i.pravatar.cc/150?u=anjali'
+    name: 'Vijaya Ananthi',
+    role: 'Full Stack Developer',
+    content: 'The teaching approach is clear and simple, making complex software concepts easy to understand.',
+    image: 'public/img/woman.png'
   }
 ];
 

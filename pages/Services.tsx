@@ -279,76 +279,88 @@ const Services: React.FC = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
-                name: "Rahul Verma",
+                name: "Ananthi",
                 role: "Full Stack Developer",
                 company: "Intern at TechFlow",
-                image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=400"
+                image: "public/img/woman.png"
               },
               {
-                name: "Sneha Patel",
+                name: "Rajeswari",
                 role: "UI/UX Designer",
                 company: "Intern at CreativeMinds",
-                image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=400"
+                image: "public/img/woman.png"
               },
               {
-                name: "Sneha Patel",
+                name: "Kanchana devi",
                 role: "UI/UX Designer",
                 company: "Intern at CreativeMinds",
-                image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=400"
+                image: "public/img/woman.png"
               },
               {
-                name: "Arjun Singh",
+                name: "Maha Priya",
                 role: "Data Scientist",
                 company: "Intern at DataCorp",
-                image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=400"
+                image: "public/img/woman.png"
               },
               {
-                name: "Rahul Verma",
+                name: "RVijaya Ananthi",
                 role: "Full Stack Developer",
                 company: "Intern at TechFlow",
-                image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=400"
+                image: "public/img/woman.png"
               },
               {
-                name: "Sneha Patel",
+                name: "Bavani",
                 role: "UI/UX Designer",
                 company: "Intern at CreativeMinds",
-                image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=400"
+                image: "public/img/woman.png"
               },
               {
-                name: "Sneha Patel",
+                name: "Santhiya",
                 role: "UI/UX Designer",
                 company: "Intern at CreativeMinds",
-                image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=400"
+                image: "public/img/woman.png"
               },
               {
-                name: "Arjun Singh",
+                name: "Sivarathi",
                 role: "Data Scientist",
                 company: "Intern at DataCorp",
-                image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=400"
+                image: "public/img/woman.png"
               },
               {
-                name: "Arjun Singh",
+                name: "Shameema",
                 role: "Data Scientist",
                 company: "Intern at DataCorp",
-                image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=400"
+                image: "public/img/woman.png"
               },
               {
-                name: "Arjun Singh",
+                name: "Jeeva malar",
                 role: "Data Scientist",
                 company: "Intern at DataCorp",
-                image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=400"
+                image: "public/img/woman.png"
               },
               {
-                name: "Arjun Singh",
+                name: "Priyanka",
                 role: "Data Scientist",
                 company: "Intern at DataCorp",
-                image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=400"
+                image: "public/img/woman.png"
               },
               {
-                name: "Priya Sharma",
+                name: "Priyanka",
+                role: "Data Scientist",
+                company: "Intern at DataCorp",
+                image: "public/img/woman.png"
+              },
+              {
+                name: "Dhana Shri",
+                role: "Data Scientist",
+                company: "Intern at DataCorp",
+                image: "public/img/woman.png"
+              },
+              {
+                name: "Efciba",
                 role: "Digital Marketer",
                 company: "Intern at BrandBoost",
-                image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400"
+                image: "public/img/woman.png"
               }
             ].map((student, index) => (
               <div key={index} className="group relative bg-white dark:bg-slate-800 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
