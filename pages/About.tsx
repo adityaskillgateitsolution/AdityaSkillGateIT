@@ -37,7 +37,7 @@ const About: React.FC = () => {
         <div className="bg-white dark:bg-slate-800 text-slate-900 dark:text-white rounded-3xl p-12 shadow-xl shadow-slate-200/50 dark:shadow-none border border-slate-100 dark:border-slate-700 mb-24 flex flex-col md:flex-row gap-12 items-center">
           <div className="relative flex-shrink-0">
             <div className="absolute -inset-4 bg-gradient-to-r from-blue-600 to-green-500 rounded-[2.5rem] opacity-20 blur-2xl" />
-            <img src="public/img/CEO.png" alt="Founder" className="w-64 h-80 rounded-[2rem] object-cover shadow-2xl relative z-10" />
+            <img src="/img/CEO.png" alt="Founder" className="w-64 h-80 rounded-[2rem] object-cover shadow-2xl relative z-10" />
           </div>
           <div>
             <span className="text-blue-600 dark:text-blue-400 font-bold uppercase tracking-widest text-sm mb-2 block">Message from Founder</span>
