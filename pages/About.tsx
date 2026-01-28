@@ -11,7 +11,7 @@ const About: React.FC = () => {
         <div className="max-w-3xl mb-20">
           <h1 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6">Building the Future of IT Training</h1>
           <p className="text-lg text-slate-600 dark:text-slate-400">
-            Founded with a vision to democratize high-end tech skills, Aditya Skill Gate IT Solutions has grown into a hub for digital excellence and industry-leading development services.
+            Founded with a vision to democratize high-end tech skills, Aditya Skill Gate IT Solution has grown into a hub for digital excellence and industry-leading development services.
           </p>
         </div>
 

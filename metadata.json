@@ -1,7 +1,6 @@
-
 {
-  "name": "Aditya Skill Gate IT Solutions",
-  "description": "Official website for Aditya Skill Gate IT Solutions, an IT services and tech development training center.",
+  "name": "Aditya Skill Gate IT Solution",
+  "description": "Official website for Aditya Skill Gate IT Solution, an IT services and tech development training center.",
   "requestFramePermissions": [
     "geolocation"
   ]

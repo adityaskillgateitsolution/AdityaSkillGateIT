@@ -58,7 +58,7 @@ const Navbar: React.FC<NavbarProps> = ({ isDarkMode, toggleTheme }) => {
               <img
                 src="/img/logo.png"
                 alt="Aditya Skill Gate Logo"
-                className="h-12 w-12 object-contain"
+                className="h-12 object-contain"
               />
               <div className="flex flex-col items-center text-center">
                 <span className="text-xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-green-600 dark:from-blue-400 dark:to-green-400">
@@ -76,20 +76,18 @@ const Navbar: React.FC<NavbarProps> = ({ isDarkMode, toggleTheme }) => {
                 <Link
                   key={path}
                   to={path}
-                  className={`flex items-center gap-2 text-sm font-bold relative py-2 group transition-all ${
-                    isActive(path)
-                      ? "text-blue-600 dark:text-blue-400"
-                      : "text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400"
-                  }`}
+                  className={`flex items-center gap-2 text-sm font-bold relative py-2 group transition-all ${isActive(path)
+                    ? "text-blue-600 dark:text-blue-400"
+                    : "text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400"
+                    }`}
                 >
                   <Icon size={18} />
                   <span>{label}</span>
                   <span
-                    className={`absolute bottom-0 left-0 h-0.5 bg-blue-600 dark:bg-blue-400 rounded-full transition-all duration-300 ${
-                      isActive(path)
-                        ? "w-full"
-                        : "w-0 group-hover:w-full"
-                    }`}
+                    className={`absolute bottom-0 left-0 h-0.5 bg-blue-600 dark:bg-blue-400 rounded-full transition-all duration-300 ${isActive(path)
+                      ? "w-full"
+                      : "w-0 group-hover:w-full"
+                      }`}
                   />
                 </Link>
               ))}
@@ -119,11 +117,10 @@ const Navbar: React.FC<NavbarProps> = ({ isDarkMode, toggleTheme }) => {
               {/* MOBILE MENU BUTTON */}
               <button
                 onClick={() => setIsOpen(!isOpen)}
-                className={`lg:hidden p-2.5 rounded-xl z-[70] transition-all ${
-                  isOpen
-                    ? "bg-blue-600 text-white shadow-lg shadow-blue-600/30"
-                    : "text-slate-600 dark:text-slate-300 bg-slate-50 dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700"
-                }`}
+                className={`lg:hidden p-2.5 rounded-xl z-[70] transition-all ${isOpen
+                  ? "bg-blue-600 text-white shadow-lg shadow-blue-600/30"
+                  : "text-slate-600 dark:text-slate-300 bg-slate-50 dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700"
+                  }`}
                 aria-label="Toggle Menu"
               >
                 {isOpen ? <X size={26} /> : <Menu size={26} />}
@@ -135,9 +132,8 @@ const Navbar: React.FC<NavbarProps> = ({ isDarkMode, toggleTheme }) => {
 
       {/* MOBILE MENU */}
       <div
-        className={`fixed inset-0 z-[60] transition-all duration-500 ${
-          isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
-        }`}
+        className={`fixed inset-0 z-[60] transition-all duration-500 ${isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+          }`}
       >
         <div
           className="absolute inset-0 bg-slate-900/40 backdrop-blur-md"
@@ -145,9 +141,8 @@ const Navbar: React.FC<NavbarProps> = ({ isDarkMode, toggleTheme }) => {
         />
 
         <div
-          className={`absolute right-0 top-0 h-full w-[85%] max-w-sm bg-white dark:bg-slate-900 shadow-2xl transition-transform duration-500 flex flex-col ${
-            isOpen ? "translate-x-0" : "translate-x-full"
-          }`}
+          className={`absolute right-0 top-0 h-full w-[85%] max-w-sm bg-white dark:bg-slate-900 shadow-2xl transition-transform duration-500 flex flex-col ${isOpen ? "translate-x-0" : "translate-x-full"
+            }`}
         >
           <div className="h-20" />
 
@@ -161,11 +156,10 @@ const Navbar: React.FC<NavbarProps> = ({ isDarkMode, toggleTheme }) => {
                 key={item.path}
                 to={item.path}
                 onClick={() => setIsOpen(false)}
-                className={`flex items-center justify-between py-4 px-5 rounded-2xl transition-all duration-300 ${
-                  isActive(item.path)
-                    ? "bg-blue-600 text-white shadow-lg shadow-blue-600/20"
-                    : "text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800"
-                }`}
+                className={`flex items-center justify-between py-4 px-5 rounded-2xl transition-all duration-300 ${isActive(item.path)
+                  ? "bg-blue-600 text-white shadow-lg shadow-blue-600/20"
+                  : "text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800"
+                  }`}
                 style={{ transitionDelay: `${idx * 40}ms` }}
               >
                 <div className="flex items-center gap-4">
