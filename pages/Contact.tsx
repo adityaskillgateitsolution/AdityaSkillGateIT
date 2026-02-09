@@ -1,9 +1,43 @@
 
-import React, { useState } from 'react';
-import { Phone,Instagram, Mail, MessageCircle, MapPin, ChevronDown, ChevronUp, Send } from 'lucide-react';
+import React, { useState, useEffect, useRef } from 'react';
+import { useLocation } from 'react-router-dom';
+import { Phone, Instagram, Mail, MessageCircle, MapPin, ChevronDown, ChevronUp, Send } from 'lucide-react';
 
 const Contact: React.FC = () => {
+  const location = useLocation();
+  const formRef = useRef<HTMLDivElement>(null);
   const [openFaq, setOpenFaq] = useState<number | null>(0);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+
+  useEffect(() => {
+    if (location.state) {
+      const { subject, message, scrollToForm } = location.state as { subject?: string; message?: string; scrollToForm?: boolean };
+
+      if (subject || message) {
+        setFormData(prev => ({
+          ...prev,
+          subject: subject || prev.subject,
+          message: message || prev.message
+        }));
+      }
+
+      if (scrollToForm && formRef.current) {
+        setTimeout(() => {
+          formRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 300);
+      }
+    }
+  }, [location.state]);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
 
   const faqs = [
     {
@@ -118,22 +152,17 @@ const Contact: React.FC = () => {
 
 
           {/* Form */}
-          <div className="lg:col-span-2 bg-white dark:bg-slate-800 text-slate-900 dark:text-white p-8 md:p-12 rounded-[3rem] shadow-2xl shadow-slate-200/60 dark:shadow-none border border-slate-100 dark:border-slate-700">
-              <h2 className="text-3xl font-bold mb-8">Send Us a Message</h2>
+          <div ref={formRef} className="lg:col-span-2 bg-white dark:bg-slate-800 text-slate-900 dark:text-white p-8 md:p-12 rounded-[3rem] shadow-2xl shadow-slate-200/60 dark:shadow-none border border-slate-100 dark:border-slate-700">
+            <h2 className="text-3xl font-bold mb-8">Send Us a Message</h2>
 
-              <form
-                className="grid sm:grid-cols-2 gap-8"
-                onSubmit={(e) => {
-                  e.preventDefault()
+            <form
+              className="grid sm:grid-cols-2 gap-8"
+              onSubmit={(e) => {
+                e.preventDefault()
 
-                  const formData = new FormData(e.currentTarget)
+                const { name, email, subject, message } = formData;
 
-                  const name = formData.get("name")
-                  const email = formData.get("email")
-                  const subject = formData.get("subject")
-                  const message = formData.get("message")
-
-                  const whatsappMessage = `
+                const whatsappMessage = `
             Hello Aditya Skill Gate 👋
 
             Name: ${name}
@@ -144,84 +173,97 @@ const Contact: React.FC = () => {
             ${message}
                   `.trim()
 
-                  const whatsappURL = `https://wa.me/916382604808?text=${encodeURIComponent(
-                    whatsappMessage
-                  )}`
+                const whatsappURL = `https://wa.me/916382604808?text=${encodeURIComponent(
+                  whatsappMessage
+                )}`
 
-                  window.open(whatsappURL, "_blank")
+                window.open(whatsappURL, "_blank")
 
-                  e.currentTarget.reset()
-                }}
+                setFormData({
+                  name: '',
+                  email: '',
+                  subject: '',
+                  message: ''
+                });
+              }}
+            >
+              {/* Full Name */}
+              <div className="space-y-3">
+                <label className="text-xs font-black uppercase tracking-[0.2em] text-slate-400 px-1">
+                  Full Name
+                </label>
+                <input
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  type="text"
+                  placeholder="Name"
+                  required
+                  className="w-full px-8 py-5 bg-slate-50 dark:bg-slate-900 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all border border-slate-200 dark:border-slate-700 shadow-inner text-slate-900 dark:text-white placeholder:text-slate-400"
+                />
+              </div>
+
+              {/* Email */}
+              <div className="space-y-3">
+                <label className="text-xs font-black uppercase tracking-[0.2em] text-slate-400 px-1">
+                  Email Address
+                </label>
+                <input
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  type="email"
+                  placeholder="Email"
+                  required
+                  className="w-full px-8 py-5 bg-slate-50 dark:bg-slate-900 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all border border-slate-200 dark:border-slate-700 shadow-inner text-slate-900 dark:text-white placeholder:text-slate-400"
+                />
+              </div>
+
+              {/* Subject */}
+              <div className="space-y-3 sm:col-span-2">
+                <label className="text-xs font-black uppercase tracking-[0.2em] text-slate-400 px-1">
+                  Subject
+                </label>
+                <input
+                  name="subject"
+                  value={formData.subject}
+                  onChange={handleChange}
+                  type="text"
+                  placeholder="Course Inquiry / Business Solution"
+                  required
+                  className="w-full px-8 py-5 bg-slate-50 dark:bg-slate-900 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all border border-slate-200 dark:border-slate-700 shadow-inner text-slate-900 dark:text-white placeholder:text-slate-400"
+                />
+              </div>
+
+              {/* Message */}
+              <div className="space-y-3 sm:col-span-2">
+                <label className="text-xs font-black uppercase tracking-[0.2em] text-slate-400 px-1">
+                  Message
+                </label>
+                <textarea
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  rows={5}
+                  placeholder="Tell us more about your requirements..."
+                  required
+                  className="w-full px-8 py-5 bg-slate-50 dark:bg-slate-900 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all border border-slate-200 dark:border-slate-700 shadow-inner resize-none text-slate-900 dark:text-white placeholder:text-slate-400"
+                />
+              </div>
+
+              {/* Submit */}
+              <button
+                type="submit"
+                className="sm:col-span-2 bg-gradient-to-r from-blue-600 to-green-600 text-white font-black uppercase tracking-widest py-5 rounded-2xl shadow-xl shadow-blue-500/30 hover:shadow-blue-600/50 hover:scale-[1.01] active:scale-[0.98] transition-all flex items-center justify-center gap-3"
               >
-                {/* Full Name */}
-                <div className="space-y-3">
-                  <label className="text-xs font-black uppercase tracking-[0.2em] text-slate-400 px-1">
-                    Full Name
-                  </label>
-                  <input
-                    name="name"
-                    type="text"
-                    placeholder="Abdul"
-                    required
-                    className="w-full px-8 py-5 bg-slate-50 dark:bg-slate-900 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all border border-slate-200 dark:border-slate-700 shadow-inner text-slate-900 dark:text-white placeholder:text-slate-400"
-                  />
-                </div>
+                Send via WhatsApp <Send size={20} />
+              </button>
+            </form>
 
-                {/* Email */}
-                <div className="space-y-3">
-                  <label className="text-xs font-black uppercase tracking-[0.2em] text-slate-400 px-1">
-                    Email Address
-                  </label>
-                  <input
-                    name="email"
-                    type="email"
-                    placeholder="abdul@gmail.com"
-                    required
-                    className="w-full px-8 py-5 bg-slate-50 dark:bg-slate-900 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all border border-slate-200 dark:border-slate-700 shadow-inner text-slate-900 dark:text-white placeholder:text-slate-400"
-                  />
-                </div>
-
-                {/* Subject */}
-                <div className="space-y-3 sm:col-span-2">
-                  <label className="text-xs font-black uppercase tracking-[0.2em] text-slate-400 px-1">
-                    Subject
-                  </label>
-                  <input
-                    name="subject"
-                    type="text"
-                    placeholder="Course Inquiry / Business Solution"
-                    required
-                    className="w-full px-8 py-5 bg-slate-50 dark:bg-slate-900 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all border border-slate-200 dark:border-slate-700 shadow-inner text-slate-900 dark:text-white placeholder:text-slate-400"
-                  />
-                </div>
-
-                {/* Message */}
-                <div className="space-y-3 sm:col-span-2">
-                  <label className="text-xs font-black uppercase tracking-[0.2em] text-slate-400 px-1">
-                    Message
-                  </label>
-                  <textarea
-                    name="message"
-                    rows={5}
-                    placeholder="Tell us more about your requirements..."
-                    required
-                    className="w-full px-8 py-5 bg-slate-50 dark:bg-slate-900 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all border border-slate-200 dark:border-slate-700 shadow-inner resize-none text-slate-900 dark:text-white placeholder:text-slate-400"
-                  />
-                </div>
-
-                {/* Submit */}
-                <button
-                  type="submit"
-                  className="sm:col-span-2 bg-gradient-to-r from-blue-600 to-green-600 text-white font-black uppercase tracking-widest py-5 rounded-2xl shadow-xl shadow-blue-500/30 hover:shadow-blue-600/50 hover:scale-[1.01] active:scale-[0.98] transition-all flex items-center justify-center gap-3"
-                >
-                  Send via WhatsApp <Send size={20} />
-                </button>
-              </form>
-
-              <p className="text-xs text-slate-400 text-center mt-6">
-                Clicking send will open WhatsApp with your message pre-filled.
-              </p>
-            </div>
+            <p className="text-xs text-slate-400 text-center mt-6">
+              Clicking send will open WhatsApp with your message pre-filled.
+            </p>
+          </div>
 
         </div>
 
@@ -231,7 +273,7 @@ const Contact: React.FC = () => {
           <div className="space-y-6">
             {faqs.map((faq, idx) => (
               <div key={idx} className="bg-white dark:bg-slate-800 text-slate-900 dark:text-white rounded-3xl border border-slate-100 dark:border-slate-700 shadow-lg shadow-slate-100 dark:shadow-none overflow-hidden hover:border-blue-200 dark:hover:border-slate-600 transition-all">
-                <button 
+                <button
                   onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
                   className="w-full px-10 py-8 flex items-center justify-between text-left hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-colors"
                 >

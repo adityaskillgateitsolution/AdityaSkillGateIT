@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import {
   Briefcase,
   Code,
@@ -16,8 +16,11 @@ import {
   Search,
   MessageSquare
 } from 'lucide-react';
+import PricingSection from '@/components/PricingSection';
+import OfferPopup from '@/components/OfferPopup';
 
 const Services: React.FC = () => {
+  const navigate = useNavigate();
   const serviceEcosystem = [
     {
       title: 'Brand Identity & Strategy',
@@ -164,15 +167,22 @@ const Services: React.FC = () => {
             From visionary brand identities to enterprise-grade software development, we provide end-to-end expertise designed to scale your business in the modern economy.
           </p>
           <div className="flex flex-wrap justify-center gap-6">
-            <Link
-              to="/contact"
+            <button
+              onClick={() => {
+                const subject = "Business Consultation Inquiry";
+                const message = "Hello Aditya Skill Gate, I'm looking for a professional consultation regarding my business needs. Please let me know how to proceed.";
+                navigate('/contact', { state: { subject, message, scrollToForm: true } });
+              }}
               className="px-10 py-5 bg-blue-600 text-white rounded-2xl font-bold shadow-2xl shadow-blue-600/30 hover:bg-blue-700 hover:-translate-y-1 transition-all flex items-center gap-3"
             >
               Book a Consultation <ArrowRight size={20} />
-            </Link>
+            </button>
           </div>
         </div>
       </section>
+
+      {/* Pricing Section */}
+      <PricingSection />
 
       {/* SECTION 2: OUR SERVICE ECOSYSTEM */}
       <section className="py-24 bg-slate-50 dark:bg-slate-800/30">
@@ -219,12 +229,16 @@ const Services: React.FC = () => {
                   ))}
                 </div>
 
-                <Link
-                  to="/contact"
+                <button
+                  onClick={() => {
+                    const subject = `Inquiry about ${service.title}`;
+                    const message = `Hello Aditya Skill Gate, I'm interested in your ${service.title} service (${service.category}). Please provide more information.`;
+                    navigate('/contact', { state: { subject, message, scrollToForm: true } });
+                  }}
                   className="w-full py-4 bg-slate-900 dark:bg-slate-700 hover:bg-blue-600 dark:hover:bg-blue-600 text-white rounded-2xl font-bold flex items-center justify-center gap-2 transition-all shadow-lg active:scale-95"
                 >
                   Enquire Now <ArrowRight size={18} />
-                </Link>
+                </button>
               </div>
             ))}
           </div>
@@ -262,138 +276,7 @@ const Services: React.FC = () => {
       </section>
 
 
-      {/* SECTION 4: OUR PREVIOUS BATCHES */}
-      <section className="py-24 bg-slate-50 dark:bg-slate-800/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-20">
-            <span className="inline-block py-2 px-4 bg-green-50 dark:bg-green-900/20 text-green-600 dark:text-green-400 rounded-full text-xs font-black uppercase tracking-widest mb-4">
-              Student Success Stories
-            </span>
-            <h2 className="text-4xl font-bold text-slate-900 dark:text-white mb-6">Our Previous Batches</h2>
-            <div className="h-1.5 w-20 bg-blue-600 mx-auto rounded-full mb-8" />
-            <p className="text-slate-600 dark:text-slate-400 text-lg">
-              Meet the talented individuals who transformed their careers through our comprehensive internship programs.
-            </p>
-          </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                name: "Ananthi",
-                role: "Full Stack Developer",
-                company: "Intern at TechFlow",
-                image: "/img/woman.png"
-              },
-              {
-                name: "Rajeswari",
-                role: "UI/UX Designer",
-                company: "Intern at CreativeMinds",
-                image: "/img/woman.png"
-              },
-              {
-                name: "Kanchana devi",
-                role: "UI/UX Designer",
-                company: "Intern at CreativeMinds",
-                image: "/img/woman.png"
-              },
-              {
-                name: "Maha Priya",
-                role: "Data Scientist",
-                company: "Intern at DataCorp",
-                image: "/img/woman.png"
-              },
-              {
-                name: "RVijaya Ananthi",
-                role: "Full Stack Developer",
-                company: "Intern at TechFlow",
-                image: "/img/woman.png"
-              },
-              {
-                name: "Bavani",
-                role: "UI/UX Designer",
-                company: "Intern at CreativeMinds",
-                image: "/img/woman.png"
-              },
-              {
-                name: "Santhiya",
-                role: "UI/UX Designer",
-                company: "Intern at CreativeMinds",
-                image: "/img/woman.png"
-              },
-              {
-                name: "Sivarathi",
-                role: "Data Scientist",
-                company: "Intern at DataCorp",
-                image: "/img/woman.png"
-              },
-              {
-                name: "Shameema",
-                role: "Data Scientist",
-                company: "Intern at DataCorp",
-                image: "/img/woman.png"
-              },
-              {
-                name: "Jeeva malar",
-                role: "Data Scientist",
-                company: "Intern at DataCorp",
-                image: "/img/woman.png"
-              },
-              {
-                name: "Priyanka",
-                role: "Data Scientist",
-                company: "Intern at DataCorp",
-                image: "/img/woman.png"
-              },
-              {
-                name: "Priyanka",
-                role: "Data Scientist",
-                company: "Intern at DataCorp",
-                image: "/img/woman.png"
-              },
-              {
-                name: "Dhana Shri",
-                role: "Data Scientist",
-                company: "Intern at DataCorp",
-                image: "/img/woman.png"
-              },
-              {
-                name: "Efciba",
-                role: "Digital Marketer",
-                company: "Intern at BrandBoost",
-                image: "/img/woman.png"
-              }
-            ].map((student, index) => (
-              <div key={index} className="group relative bg-white dark:bg-slate-800 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                <div className="relative h-64 overflow-hidden">
-                  <div className="absolute inset-0 bg-blue-600/20 group-hover:bg-blue-600/0 transition-all z-10" />
-                  <img
-                    src={student.image}
-                    alt={student.name}
-                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
-                  />
-                </div>
-                <div className="p-6 relative z-20 bg-white dark:bg-slate-800">
-                  <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-1">{student.name}</h3>
-                  <p className="text-blue-600 dark:text-blue-400 font-medium text-sm mb-2">{student.role}</p>
-                  <div className="flex items-center gap-2 text-slate-500 dark:text-slate-400 text-xs">
-                    <CheckCircle2 size={14} className="text-green-500" />
-                    <span>{student.company}</span>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-16 text-center">
-            <Link
-              to="/contact"
-              className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 font-bold hover:gap-4 transition-all"
-            >
-              Join our next batch <ArrowRight size={20} />
-            </Link>
-          </div>
-        </div>
-      </section>
 
       {/* SECTION 5: FINAL CALL TO ACTION */}
       <section className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -405,12 +288,16 @@ const Services: React.FC = () => {
               Join hundreds of successful companies that have accelerated their growth with our expert IT solutions and training.
             </p>
             <div className="flex flex-wrap justify-center gap-6">
-              <Link
-                to="/contact"
+              <button
+                onClick={() => {
+                  const subject = "Business Growth Inquiry";
+                  const message = "Hello Aditya Skill Gate, I'm ready to transform my business and interested in your IT solutions and training. Please guide me.";
+                  navigate('/contact', { state: { subject, message, scrollToForm: true } });
+                }}
                 className="px-10 py-5 bg-white text-slate-900 rounded-2xl font-bold hover:bg-blue-50 hover:scale-105 transition-all flex items-center gap-3 shadow-xl"
               >
                 Book a Consultation <MessageSquare size={20} />
-              </Link>
+              </button>
             </div>
           </div>
 
@@ -419,6 +306,8 @@ const Services: React.FC = () => {
           <div className="absolute bottom-10 right-10 w-32 h-32 bg-blue-500/10 rounded-full blur-3xl" />
         </div>
       </section>
+      {/* Offer Popup */}
+      <OfferPopup />
     </div>
   );
 };

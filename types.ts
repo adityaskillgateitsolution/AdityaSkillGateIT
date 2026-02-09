@@ -43,3 +43,13 @@ export interface TeamMember {
   specialist: string;
   image: string;
 }
+
+export interface PricingPlan {
+  id: string;
+  title: string;
+  price: string;
+  gradient: string;
+  features: string[];
+  cta: string;
+  highlighted: boolean;
+}

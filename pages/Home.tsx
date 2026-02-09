@@ -3,6 +3,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { CheckCircle, ArrowRight, Star, Quote } from 'lucide-react';
 import { PARTNERS, TESTIMONIALS } from '../constants';
+import PricingSection from '../components/PricingSection';
+import OfferPopup from '../components/OfferPopup';
 
 const Home: React.FC = () => {
   return (
@@ -56,6 +58,9 @@ const Home: React.FC = () => {
         </div>
       </section>
 
+      {/* Pricing Section */}
+      <PricingSection />
+
       {/* 2. Why Choose Aditya Skill Gate */}
       <section className="py-24 bg-white dark:bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -95,7 +100,7 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* 3. What Our Students Say */}
+      {/* 3. What Our Students Say
       <section className="py-24 bg-slate-50 dark:bg-slate-800/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -122,7 +127,7 @@ const Home: React.FC = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* 4. Our Hiring Partners
       <section className="py-24 bg-white dark:bg-slate-900">
@@ -147,6 +152,8 @@ const Home: React.FC = () => {
           </div>
         </div>
       </section> */}
+      {/* Offer Popup */}
+      <OfferPopup />
     </div>
   );
 };

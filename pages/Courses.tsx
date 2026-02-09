@@ -1,10 +1,11 @@
 
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { ShoppingCart, Check, Globe } from 'lucide-react';
+import { Link, useNavigate } from 'react-router-dom';
+import { ShoppingCart, Check, Globe, CheckCircle2, ArrowRight } from 'lucide-react';
 import { COURSES } from '../constants';
 
 const Courses: React.FC = () => {
+  const navigate = useNavigate();
   const categories = ['Web Development', 'Digital Marketing', 'UI/UX Designing'];
 
   return (
@@ -44,6 +45,8 @@ const Courses: React.FC = () => {
           </div>
           <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -mr-32 -mt-32" />
         </section>
+
+
 
         {/* Grouped Courses */}
         {categories.map((category) => (
@@ -86,12 +89,16 @@ const Courses: React.FC = () => {
                     </div>
 
                     <div className="mt-auto">
-                      <Link
-                        to="/contact"
+                      <button
+                        onClick={() => {
+                          const subject = `Enrollment Inquiry: ${course.name}`;
+                          const message = `Hello Aditya Skill Gate, I'm interested in enrolling for the ${course.name} course (${course.category}). The offered price is ₹${course.offeredPrice.toLocaleString()}. Please let me know the batch start dates and enrollment process.`;
+                          navigate('/contact', { state: { subject, message, scrollToForm: true } });
+                        }}
                         className="w-full py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-2xl font-bold flex items-center justify-center gap-2 shadow-xl shadow-blue-500/30 hover:shadow-blue-600/50 transition-all"
                       >
                         Enroll Now <ShoppingCart size={18} />
-                      </Link>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -99,6 +106,143 @@ const Courses: React.FC = () => {
             </div>
           </div>
         ))}
+
+        {/* SECTION 4: OUR PREVIOUS BATCHES */}
+        <section className="py-24 bg-slate-50 dark:bg-slate-800/30">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center max-w-3xl mx-auto mb-20">
+              <span className="inline-block py-2 px-4 bg-green-50 dark:bg-green-900/20 text-green-600 dark:text-green-400 rounded-full text-xs font-black uppercase tracking-widest mb-4">
+                Student Success Stories
+              </span>
+              <h2 className="text-4xl font-bold text-slate-900 dark:text-white mb-6">Our Previous Batches</h2>
+              <div className="h-1.5 w-20 bg-blue-600 mx-auto rounded-full mb-8" />
+              <p className="text-slate-600 dark:text-slate-400 text-lg">
+                Meet the talented individuals who transformed their careers through our comprehensive internship programs.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+              {[
+                {
+                  name: "Ananthi",
+                  role: "Full Stack Developer",
+                  company: "Intern at TechFlow",
+                  image: "/img/woman.png"
+                },
+                {
+                  name: "Rajeswari",
+                  role: "UI/UX Designer",
+                  company: "Intern at CreativeMinds",
+                  image: "/img/woman.png"
+                },
+                {
+                  name: "Kanchana devi",
+                  role: "UI/UX Designer",
+                  company: "Intern at CreativeMinds",
+                  image: "/img/woman.png"
+                },
+                {
+                  name: "Maha Priya",
+                  role: "Data Scientist",
+                  company: "Intern at DataCorp",
+                  image: "/img/woman.png"
+                },
+                {
+                  name: "RVijaya Ananthi",
+                  role: "Full Stack Developer",
+                  company: "Intern at TechFlow",
+                  image: "/img/woman.png"
+                },
+                {
+                  name: "Bavani",
+                  role: "UI/UX Designer",
+                  company: "Intern at CreativeMinds",
+                  image: "/img/woman.png"
+                },
+                {
+                  name: "Santhiya",
+                  role: "UI/UX Designer",
+                  company: "Intern at CreativeMinds",
+                  image: "/img/woman.png"
+                },
+                {
+                  name: "Sivarathi",
+                  role: "Data Scientist",
+                  company: "Intern at DataCorp",
+                  image: "/img/woman.png"
+                },
+                {
+                  name: "Shameema",
+                  role: "Data Scientist",
+                  company: "Intern at DataCorp",
+                  image: "/img/woman.png"
+                },
+                {
+                  name: "Jeeva malar",
+                  role: "Data Scientist",
+                  company: "Intern at DataCorp",
+                  image: "/img/woman.png"
+                },
+                {
+                  name: "Priyanka",
+                  role: "Data Scientist",
+                  company: "Intern at DataCorp",
+                  image: "/img/woman.png"
+                },
+                {
+                  name: "Priyanka",
+                  role: "Data Scientist",
+                  company: "Intern at DataCorp",
+                  image: "/img/woman.png"
+                },
+                {
+                  name: "Dhana Shri",
+                  role: "Data Scientist",
+                  company: "Intern at DataCorp",
+                  image: "/img/woman.png"
+                },
+                {
+                  name: "Efciba",
+                  role: "Digital Marketer",
+                  company: "Intern at BrandBoost",
+                  image: "/img/woman.png"
+                }
+              ].map((student, index) => (
+                <div key={index} className="group relative bg-white dark:bg-slate-800 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                  <div className="relative h-64 overflow-hidden">
+                    <div className="absolute inset-0 bg-blue-600/20 group-hover:bg-blue-600/0 transition-all z-10" />
+                    <img
+                      src={student.image}
+                      alt={student.name}
+                      className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                    />
+                  </div>
+                  <div className="p-6 relative z-20 bg-white dark:bg-slate-800">
+                    <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-1">{student.name}</h3>
+                    <p className="text-blue-600 dark:text-blue-400 font-medium text-sm mb-2">{student.role}</p>
+                    <div className="flex items-center gap-2 text-slate-500 dark:text-slate-400 text-xs">
+                      <CheckCircle2 size={14} className="text-green-500" />
+                      <span>{student.company}</span>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-16 text-center">
+              <button
+                onClick={() => {
+                  const subject = "Next Batch Inquiry";
+                  const message = "Hello Aditya Skill Gate, I'm interested in joining your next batch for IT training. Please provide more details about the upcoming schedule and courses.";
+                  navigate('/contact', { state: { subject, message, scrollToForm: true } });
+                }}
+                className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 font-bold hover:gap-4 transition-all"
+              >
+                Join our next batch <ArrowRight size={20} />
+              </button>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
   );

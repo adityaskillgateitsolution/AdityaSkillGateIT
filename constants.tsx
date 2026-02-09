@@ -1,5 +1,5 @@
 
-import { Course, Job, BlogPost, Testimonial, TeamMember } from './types';
+import { Course, Job, BlogPost, Testimonial, TeamMember, PricingPlan } from './types';
 
 export const COURSES: Course[] = [
   {
@@ -230,4 +230,49 @@ export const PARTNERS: Partner[] = [
   { name: 'Wipro', logo: 'https://upload.wikimedia.org/wikipedia/commons/a/a0/Wipro_Primary_Logo_Color_RGB.svg' },
   { name: 'Accenture', logo: 'https://upload.wikimedia.org/wikipedia/commons/c/cd/Accenture.svg' },
   { name: 'HCL', logo: 'https://upload.wikimedia.org/wikipedia/commons/a/ad/HCL_Technologies_logo.svg' }
+];
+export const PRICING_PLANS: PricingPlan[] = [
+  {
+    id: '1',
+    title: 'STUDENT STARTER KIT',
+    price: '₹4,999',
+    gradient: 'from-blue-600 to-cyan-400',
+    features: [
+      'LinkedIn Profile Refurbishing',
+      'Naukri Account Optimization',
+      'Superset Account Setup',
+      'Static Portfolio Website (SPA)',
+      'Resume & Online Presence Review'
+    ],
+    cta: 'Get Offer',
+    highlighted: false
+  },
+  {
+    id: '2',
+    title: 'BUSINESS STARTER KIT',
+    price: '₹7,999',
+    gradient: 'from-blue-700 to-teal-500',
+    features: [
+      'Logo Designing',
+      'Brochure & Flyers',
+      'Posters & Banners',
+      'Business Card Design',
+      'Static Website (5–6 Pages)'
+    ],
+    cta: 'Get Offer',
+    highlighted: true
+  },
+  {
+    id: '3',
+    title: 'UPGRADE KIT',
+    price: '₹2,999',
+    gradient: 'from-blue-600 to-cyan-400',
+    features: [
+      'Website Refurbishing / Enhancement',
+      'SEO Optimization',
+      'Device Responsiveness'
+    ],
+    cta: 'Get Offer',
+    highlighted: false
+  }
 ];
