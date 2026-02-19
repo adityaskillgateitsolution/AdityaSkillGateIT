@@ -235,12 +235,10 @@ export const PRICING_PLANS: PricingPlan[] = [
   {
     id: '1',
     title: 'STUDENT STARTER KIT',
-    price: '₹4,999',
+    price: '₹999',
     gradient: 'from-blue-600 to-cyan-400',
     features: [
       'LinkedIn Profile Refurbishing',
-      'Naukri Account Optimization',
-      'Superset Account Setup',
       'Static Portfolio Website (SPA)',
       'Resume & Online Presence Review'
     ],
@@ -253,11 +251,11 @@ export const PRICING_PLANS: PricingPlan[] = [
     price: '₹7,999',
     gradient: 'from-blue-700 to-teal-500',
     features: [
+      'Static Website (5–6 Pages)',
       'Logo Designing',
       'Brochure & Flyers',
       'Posters & Banners',
       'Business Card Design',
-      'Static Website (5–6 Pages)'
     ],
     cta: 'Get Offer',
     highlighted: true
@@ -269,8 +267,8 @@ export const PRICING_PLANS: PricingPlan[] = [
     gradient: 'from-blue-600 to-cyan-400',
     features: [
       'Website Refurbishing / Enhancement',
-      'SEO Optimization',
-      'Device Responsiveness'
+      'Digital Marketing',
+      '3-4 posts for Social Media Marketing'
     ],
     cta: 'Get Offer',
     highlighted: false
